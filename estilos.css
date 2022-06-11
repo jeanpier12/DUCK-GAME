@@ -104,6 +104,7 @@ body {
   width: 100%;
 
   display: flex;
+  align-items: center;
 
 }
 #left-div{
@@ -141,6 +142,37 @@ body {
   height: 400px;
   margin: 3px;
   margin-right: 10px;
+}
+#como-jugar{
+  height: 100vh;
+}
+#contenedor-rangos{
+  width: 100%;
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: center;
+}
+#contenedor-rangos>div{
+  width: 30%;
+  display: flex;
+  flex-flow: column nowrap;
+  align-items: center;
+}
+#jugar-button{
+  color: white;
+  text-transform: uppercase;
+  font-size: 22px;
+  margin-top: 32px;
+  width: 170px;
+  height: 50px;
+  border-radius: 10px;
+  border: none;
+  background-color: #FC990D;
+  transition: all 0.5s;
+}
+#jugar-button:hover{
+  background-color: #44da17;
+  width: 225px;
 }
 
 

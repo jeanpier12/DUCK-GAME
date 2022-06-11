@@ -14,7 +14,7 @@
 <body>
     <ul class="nav">
         <li><a href="#historia">HISTORIA</a></li>
-        <li><a>COMO JUGAR</a></li>
+        <li><a href="#como-jugar">COMO JUGAR</a></li>
         <li><a>JUGAR</a></li>
     </ul>
     <div class="contenedor">
@@ -32,28 +32,31 @@
                 Tenemos que estudiar este virus para encontrar la cura , el destino de la humanidad esta
                 en tus manos soldado.
             </p>
-            <div class="centrar"><button id="como-jugar-button">COMO JUGAR</button></div>
+            <div class="centrar"><a href="#como-jugar"><button id="como-jugar-button">SIGUIENTE</button></a></div>
         </div>
         <div id="right-div" data-aos="flip-right" data-aos-duration="1000">
             <img src="img/virus_gif.gif" alt="">
         </div>
     </div>
-    <div class="contenedor-rangos">
-        <div class="low">
-            <img src="img/low-range.webp" alt="low">
-            <h1>Cadete</h1>
-            <p>Consigue 100 puntos para obtener este rango</p>
+    <div id="como-jugar">
+        <div id="contenedor-rangos">
+            <div class="low" data-aos="fade-up" data-aos-duration="500">
+                <img src="img/low-range.webp" alt="low">
+                <h1>Cadete</h1>
+                <p>Consigue 100 puntos para obtener este rango</p>
+            </div>
+            <div class="mid" data-aos="fade-up" data-aos-duration="1000">
+                <img src="img/mid-range.webp" alt="mid">
+                <h1>Oficial</h1>
+                <p>Consigue 500 puntos para obtener este rango</p>
+            </div>
+            <div class="height" data-aos="fade-up" data-aos-duration="1500">
+                <img src="img/high-range.webp" alt="hight">
+                <h1>Capitan</h1>
+                <p>Consigue 1000 puntos para obtener este rango</p>
+            </div>
         </div>
-        <div class="mid">
-            <img src="img/mid-range.webp" alt="mid">
-            <h1>Oficial</h1>
-            <p>Consigue 500 puntos para obtener este rango</p>
-        </div>
-        <div class="height">
-            <img src="img/high-range.webp" alt="hight">
-            <h1>Capitan</h1>
-            <p>Consigue 1000 puntos para obtener este rango</p>
-        </div>
+        <div class="centrar" data-aos="zoom-in-up"><button id="jugar-button">JUGAR</button></div>
     </div>
 </body>
     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
