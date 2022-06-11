@@ -1,0 +1,145 @@
+*{
+  font-family: 'Kdam Thmor Pro', sans-serif;
+  color: #FC990D;
+}
+body {
+  background-image: url("img/fondo.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+.nav {
+  text-transform: uppercase;
+  text-align: center;
+  font-weight: 600;
+}
+
+.nav * {
+  box-sizing: border-box;
+  transition: all .35s ease;
+}
+.nav li {
+  display: inline-block;
+  list-style: outside none none;
+  margin: .5em 1em;
+  padding: 0;
+}
+.nav a {
+  padding: .5em .8em;
+  color: red (112, 4, 13, 0.5);
+  position: relative;
+  text-decoration: none;
+  font-size: 20px;
+}
+.nav a::before,
+.nav a::after {
+  content: '';
+  height: 14px;
+  width: 14px;
+  position: absolute;
+  transition: all .35s ease;
+  opacity: 0;
+}
+.nav a::before {
+  content: '';
+  right: 0;
+  top: 0;
+  border-top: 3px solid #db0000;
+  border-right: 3px solid #ce0b05;
+  transform: translate(-100%, 50%);
+}
+.nav a:after {
+  content: '';
+  left: 0;
+  bottom: 0;
+  border-bottom: 3px solid #db0000 ;
+  border-left: 3px solid #db0000;
+  transform: translate(100%, -50%)
+}
+.nav a:hover:before,
+.nav a:hover:after{
+  transform: translate(0,0);
+  opacity: 1;
+}
+.nav a:hover {
+  color: #c51567;
+}
+.contenedor{
+  width: 100%;
+  height: 100vh;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+}
+#title{
+  color: white;
+  font-size: 45px;
+}
+#imagen-menu{
+  width: 500px;
+}
+#play-button{
+  color: white;
+  text-transform: uppercase;
+  font-size: 32px;
+  margin-top: 32px;
+  width: 170px;
+  height: 50px;
+  border-radius: 10px;
+  border: none;
+  background-color: #FC990D;
+  transition: all 0.5s;
+}
+#play-button:hover{
+  width: 225px;
+  color: white;
+  background-color: red;
+}
+.contenedor-historia{
+  height: 100vh;
+  width: 100%;
+
+  display: flex;
+
+}
+#left-div h1{
+  color: rgb(204, 0, 0);
+}
+#left-div p{
+  color: white;
+  font-size: 22px;
+}
+.centrar{
+  display: flex;
+  justify-content: center;
+}
+#como-jugar-button{
+  color: white;
+  text-transform: uppercase;
+  font-size: 22px;
+  margin-top: 32px;
+  width: 170px;
+  height: 50px;
+  border-radius: 10px;
+  border: none;
+  background-color: #FC990D;
+  transition: all 0.5s;
+}
+#como-jugar-button:hover{
+  background-color: #a81995;
+  width: 225px;
+}
+#right-div img{
+  width: 550px;
+  height: 400px;
+  margin: 3px;
+  margin-right: 10px;
+}
+
+
+
+
+
+
+
