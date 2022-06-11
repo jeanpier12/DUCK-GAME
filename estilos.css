@@ -106,6 +106,9 @@ body {
   display: flex;
 
 }
+#left-div{
+  margin-left: 10px;margin-right: 10px;
+}
 #left-div h1{
   color: rgb(204, 0, 0);
 }
