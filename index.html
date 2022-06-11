@@ -1,4 +1,3 @@
-
 <!DOCTYPE html>
 <html lang="es">
 <head>
@@ -10,33 +9,38 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Kdam+Thmor+Pro&display=swap" rel="stylesheet">
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
 </head>
 <body>
     <ul class="nav">
-        <li><a>HISTORIA</a></li>
+        <li><a href="#historia">HISTORIA</a></li>
         <li><a>COMO JUGAR</a></li>
         <li><a>JUGAR</a></li>
     </ul>
     <div class="contenedor">
-        <h1 id ="title">DUCK GAME</h1>
-        <img id ="imagen-menu" src="img/cazador.jpg" alt="cazador">
-        <button id ="play-button">HISTORIA</button>
+        <h1 id="title">DUCK GAME</h1>
+        <img id="imagen-menu" src="img/cazador.jpg" alt="cazador">
+        <a href="#historia"><button id="play-button">SIGUIENTE</button></a>
     </div>
-    <div class="contenedor-historia">
-        <div id="left-div">
+    <div class="contenedor-historia" id ="historia">
+        <div id="left-div" data-aos="fade-right" data-aos-duration="1000">
             <h1>HISTORIA</h1>
             <p>
-                Un equipo de investigacion encontro un nuevo tipo de virus mortal para los humanos , 
+                Un equipo de investigacion encontro un nuevo tipo de virus mortal para los humanos ,
                 este virus lo portan algunas especies de aves , tu mision es ir al norte y cazar algunos
                 ejemplares y traerlos al laboratorio para su investigacion.
-                Tenemos que estudiar este virus para encontrar la cura , el destino de la humanidad esta 
+                Tenemos que estudiar este virus para encontrar la cura , el destino de la humanidad esta
                 en tus manos soldado.
             </p>
-            <div class="centrar"><button id ="como-jugar-button">COMO JUGAR</button></div>
+            <div class="centrar"><button id="como-jugar-button">COMO JUGAR</button></div>
         </div>
-        <div id="right-div">
+        <div id="right-div" data-aos="flip-right" data-aos-duration="1000">
             <img src="img/virus_gif.gif" alt="">
         </div>
     </div>
 </body>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+        AOS.init();
+      </script>
 </html>
