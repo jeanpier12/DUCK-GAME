@@ -1,5 +1,5 @@
-const music = new Audio('Sound');
-music.play();
-music.loop =true;
-music.playbackRate = 2;
-music.pause();
+
+var fileUrl = "Sounds/tema.wav";
+var audio = new Audio(fileUrl);
+audio.play();
+
