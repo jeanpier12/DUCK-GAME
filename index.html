@@ -6,6 +6,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Duck Game</title>
+    <!--Importacion de fuente y libreria por Juan Villegas-->
     <link rel="stylesheet" href="estilos.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -14,11 +15,13 @@
 </head>
 
 <body>
+    <!--HTML(Menu) hecho por Gianluka Vazques-->
     <script src="main.js"></script>
     <ul class="nav">
         <li><a href="#historia">HISTORIA</a></li>
         <li><a href="#como-jugar">COMO JUGAR</a></li>
-        <li><a>JUGAR</a></li>
+        <li><a href="#PROBANDO">JUGAR</a></li>
+        <li><a href="indexcreditos.html">CREDITOS</a></li>
     </ul>
     <div class="contenedor">
         <h1 id="title">DUCK GAME</h1>
@@ -42,9 +45,11 @@
             <div class="centrar"><a href="#como-jugar"><button id="como-jugar-button">SIGUIENTE</button></a></div>
         </div>
         <div id="right-div" data-aos="flip-right" data-aos-duration="1000">
+        <!-- se encontro atributos en el html que no se estan usando --> 
             <img src="img/virus_gif.gif" alt="">
         </div>
     </div>
+    <!--HTML(Menu) hecho por Juan Villegas-->
     <div id="como-jugar">
         <div id="contenedor-rangos">
             <div class="low" data-aos="fade-up" data-aos-duration="500">
@@ -63,9 +68,32 @@
                 <p>Consigue 1000 puntos para obtener este rango</p>
             </div>
         </div>
-        <div class="centrar" data-aos="zoom-in-up"><button id="jugar-button">JUGAR</button></div>
+        <div class="centrar" data-aos="zoom-in-up" id="musica"><a id="jugar-button" href="#PROBANDO">JUGAR</a></div>
     </div>
+    <!--HTML(juego) hecho por Jhonny Castillo-->
+    <div id="PROBANDO" class="overlay" data-aos="flip-down" data-aos-duration="1500">
+        <div id="popupbody">
+            <a id="cerrar" href="#">&times;</a>
+            <div class="mega-contenedor">
+                <div class="contenedor2">
+                    <div id="final"></div>
+                    <div class="time" id = "time">30s</div>
+                    <div id="patorobot"></div>
+                </div>
+                <div class="arma-box" id ="arma-box"></div>
+            </div>
+        </div>
+    </div>
+    <div class="resultados">
+        <div class="centrado" id = "centrado">
+            <img src="img/winner.png" alt="" data-aos="zoom-in-up" data-aos-duration="800">
+            <div id="puntos" data-aos="zoom-in-up" data-aos-duration="1000"></div>
+            <div id="rango" data-aos="zoom-in-up" data-aos-duration="1500"></div>
+        </div>
+    </div>
+    <script  src="main.js"></script>
 </body>
+<!--Activacion de libreria por Juan Villegas-->
 <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
 <script>
     AOS.init();
