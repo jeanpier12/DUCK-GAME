@@ -12,22 +12,32 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Kdam+Thmor+Pro&display=swap" rel="stylesheet">
     <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <script src="main.js"></script>
 </head>
 
 <body>
     <!--HTML(Menu) hecho por Gianluka Vazques-->
-    <script src="main.js"></script>
+    
+
+    <div class="contenedor_global">
+    <!-- botones de menu -->
     <ul class="nav">
         <li><a href="#historia">HISTORIA</a></li>
         <li><a href="#como-jugar">COMO JUGAR</a></li>
         <li><a href="#PROBANDO">JUGAR</a></li>
         <li><a href="indexcreditos.html">CREDITOS</a></li>
     </ul>
+    <!-- fin de botones del menu -->
+
+  <!-- seccion de la imagen principal del juego  -->
     <div class="contenedor">
         <h1 id="title">DUCK GAME</h1>
         <img id="imagen-menu" src="img/cazador.jpg" alt="cazador">
         <a href="#historia"><button id="play-button">SIGUIENTEs</button></a>
     </div>
+    <!-- fin de la sección principal del juego  -->
+
+      <!-- sección del la historia del juego -->
     <div class="contenedor-historia" id="historia">
         <div id="left-div" data-aos="fade-right" data-aos-duration="1000">
             <h1>HISTORIA</h1>
@@ -49,7 +59,10 @@
             <img src="img/virus_gif.gif" alt="">
         </div>
     </div>
-    <!--HTML(Menu) hecho por Juan Villegas-->
+    <!-- final de la historia del juego -->
+
+
+    <!--Sección de como jugar del juego-->
     <div id="como-jugar">
         <div id="contenedor-rangos">
             <div class="low" data-aos="fade-up" data-aos-duration="500">
@@ -70,20 +83,40 @@
         </div>
         <div class="centrar" data-aos="zoom-in-up" id="musica"><a id="jugar-button" href="#PROBANDO">JUGAR</a></div>
     </div>
-    <!--HTML(juego) hecho por Jhonny Castillo-->
+  <!-- fin de la sección como juegar del juego -->
+    
+    <!-- inicio del contenedor princinciapl de la sección del juego -->
     <div id="PROBANDO" class="overlay" data-aos="flip-down" data-aos-duration="1500">
         <div id="popupbody">
-            <a id="cerrar" href="#">&times;</a>
+            
+            <!-- contenedor 2 del juego -->
             <div class="mega-contenedor">
+             <div class="contenedor-botones">
+                <!-- boton cerrar -->
+               <a id="cerrar" href="#">cerrar</a>
+               <div class="time" id = "time">30</div>
+                <div id="caja_recarga">
+                    <p>Reiniciar</p>
+                </div>
+            </div>
+                <!-- contenedor 3 -->
                 <div class="contenedor2">
                     <div id="final"></div>
-                    <div class="time" id = "time">30s</div>
+
+                  
+
                     <div id="patorobot"></div>
                 </div>
+
+                <!-- arma del soldado -->
                 <div class="arma-box" id ="arma-box"></div>
+
             </div>
         </div>
     </div>
+    <!-- fin de la sección del juego -->
+
+    <!-- seccion de datos de fin de partida -->
     <div class="resultados">
         <div class="centrado" id = "centrado">
             <img src="img/winner.png" alt="" data-aos="zoom-in-up" data-aos-duration="800">
@@ -91,6 +124,8 @@
             <div id="rango" data-aos="zoom-in-up" data-aos-duration="1500"></div>
         </div>
     </div>
+
+</div>
     <script  src="main.js"></script>
 </body>
 <!--Activacion de libreria por Juan Villegas-->

@@ -9,10 +9,13 @@ var puntos = 0;
 var rango = "cadete";
 var jugando = false;
 var una = true;
-//Movimiento del Pato hecho por Jhonny Castillo
+var disparo=true;
+//declarando e inicializando la fucnion de over pato 
+//esta funcion la llama un evento clip
 function MoverPato(){
     //juagando activa el cronometro
     jugando = true;
+    console.log("primer"+jugando);
     //estas variable guardan un numero entero aleatorio
     //no fueron declarados las variables randnum , randNum2
     randNum  = Math.round(Math.random()*200); 
@@ -22,6 +25,13 @@ function MoverPato(){
     var A = document.getElementById("patorobot").style.marginTop = randNum + "px";
     var B = document.getElementById("patorobot").style.marginLeft = randNum2 + "px";
 
+    //esta condicion es para que solo se llame una vez al metodo RestarCronometro
+    if(jugando && disparo ==true){
+        disparo=false;
+        RestarCronometro();
+         
+    }
+   
 }
 //Audio de explosion por Jhonny Castillo
 function enemigo() {
@@ -35,10 +45,13 @@ function enemigo() {
     puntos += 100;
 }
 //Funcion de Restar tiempo por Juan Villegas
+
 function RestarCronometro(){
     if(jugando && number > 0){
-        Cronometro.innerHTML = "<p>"+ number+"s</p>";
+        console.log(jugando);
+        Cronometro.innerHTML = "<p>"+ number+"</p>";
         number--;
+        setTimeout("RestarCronometro()", 1000);
     }
     //si el tiempo llega a 0
     else if(number == 0){
@@ -46,10 +59,13 @@ function RestarCronometro(){
         if(una){MostrarDatos();una = false;}
     }
 }
+
+
+
 //Funcion Mostrar Datos Finales por Juan Villegas
 function MostrarDatos(){
     Final.innerHTML = "<a href = '#centrado'><button id ='botonFinal'></button></a>";
-    Cronometro.innerHTML = "<p>0s</p>";
+    Cronometro.innerHTML = "<p>0</p>";
     Puntos.innerHTML = "<p>==== PUNTOS : "+ puntos+" ====</p>";
     if(puntos >= 1000)Rango.innerHTML = "<p>==== RANGO : CAPITAN ====</p>";
     else if(puntos >= 500)Rango.innerHTML = "<p>==== RANGO : OFICIAL ====</p>";
@@ -57,8 +73,8 @@ function MostrarDatos(){
     MusicaVictoria();
     pauseInicio();
 }
-//supongo que setInterval llama a la funcionn cada segundo
-setInterval(RestarCronometro , 1000);
+//supongo que setInterval llama a la funcionn RestarCronometro  cada segundo
+// setInterval(RestarCronometro , 1000);
 
 //Musica de fondo por Jhonny Castillo
 function MusicaInicio() {
@@ -79,6 +95,7 @@ function MusicaVictoria(){
 }
 //Eventos por Jhonny Castillo
 document.getElementById('musica').addEventListener("click",MusicaInicio);
+// cuando hago clip sobre el elelemento patoroboxx se activa la funcion MoverPato
 document.getElementById('patorobot').addEventListener("click",function(){setTimeout(MoverPato, 0);});
 document.getElementById('patorobot').addEventListener("click",function(){setTimeout(enemigo, 250);});
 
@@ -93,8 +110,9 @@ window.addEventListener('click', MouseSound , false);
 //Movimiento del Arma por Juan Villegas
 var miArma = document.getElementById("arma-box");
 function mousemove(event){
+// esta propiedad hace que mi arma se salga de su contenedor 
     miArma.style.position = 'fixed';
-    miArma.style.left = (event.clientX / 15) + "%";
+    miArma.style.left = (event.clientX / 22) + "%";
 }
 //Animacion de Disparo por Juan Villegas
 function Shoot(){
@@ -103,6 +121,16 @@ function Shoot(){
     setTimeout(function(){miArma.style.animationPlayState = "paused";
     miArma.style.animationName = "none"} , 430);
 }
+
+var recargar = document.getElementById('caja_recarga');
 //Eventos por Juan Villegas
+//evento que se activa cuando el puntero se mueva sobre un determinado elemento
+//y llama a la función muosemove
 window.addEventListener('mousemove', mousemove);
-window.addEventListener('click',Shoot)
+
+window.addEventListener('click',Shoot);
+
+// evento que se activa cuando se hace clip sobre el elementi recargar
+recargar.addEventListener('mousedown', function() {
+    location.reload();
+});

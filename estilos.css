@@ -8,9 +8,21 @@ html{
 }
 
 body {
+
   background-image: url("img/fondo.jpg");
   background-size: cover;
   background-repeat: no-repeat;
+}
+.contenedor_global{
+
+  width: 90%;
+  height:auto;
+  margin:0px auto;   
+ border: 1px solid rgba(225,225,226,0.8);
+ box-shadow:0px 0px 10px #ccc;
+ margin-top: 40px;
+ margin-bottom: 40px;
+ min-height: 600px;
 }
 .nav {
   text-transform: uppercase;
@@ -185,19 +197,144 @@ body {
   padding: 0;
   margin: 0;
 }
-.mega-contenedor{
-  width: 100%;
-  height: 100vh;
 
-  display: flex;
-  justify-content: center;
-  align-items: center;
+.caja_recarga{
+
+  margin-left: 0;
+  margin-top: 0px;
 }
+
+
+/* imagen del pato */
+#patorobot{
+  background-image: url("img/patorobot.png");
+  background-size: contain;
+  background-repeat: no-repeat;
+  width: 100px;
+  height: 100px;
+  position: absolute;
+  transition-delay: .5s;   
+}
+/* imagen del pato explotando */
+#patorobot:active{
+  background-image: url("img/explosionanimada.gif");
+  transition-delay: 50ms;/*aca retrasamos cuando aparezca la animacion de muerte*/
+}
+
+
+
+
+/*contenedor principal de la sección del juego*/
+.overlay { 
+  /*position: fixed;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;*/
+
+  margin: 0 auto;
+  width: 80%;
+  height: 100vh;
+  background: rgba(0, 0, 0, 0.7);
+  transition: opacity 500ms;
+  visibility: hidden;
+  opacity: 0;
+  z-index: 100;
+  border: 2px solid blue;
+}
+
+/* cuando una etiqueta <a> llame o apunte al #PROVANDO del <div>  le daremos los siguientes estilos */ 
+.overlay:target{
+    visibility: visible;
+    opacity: 1;
+}
+/* fin delos estilos del contenedor principal de la sección del juego */
+
+/* contenedor 2 de la sección del juego  */
+.mega-contenedor{
+  width: 98%;
+  height: 700px;
+margin: 0 auto;
+  /* display: flex;
+  justify-content: center;
+  align-items: center; */
+  border: 2px solid red;
+}
+/* fin del  contenedor 2 de la sección del juego  */ 
+
+
+.contenedor-botones{
+
+  
+  border:2px solid green;
+  display: inline-block;
+ 
+margin-left: 230px;
+margin-bottom: 10px;
+}
+
+
+/* boton cerrar */
+
+#cerrar{
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  color: white;
+  text-transform: uppercase;
+  font-size: 22px;
+  margin-top: 32px;
+  width: 280px;
+  height: 50px;
+  border-radius: 10px;
+  border: none;
+  background-color: #FC990D;
+  transition: all 0.5s;
+}
+
+/* boton de tiempo */
+
+#time{
+  text-align: center;
+  display: inline-block;
+  color: rgb(14, 12, 12);
+  text-transform: uppercase;
+  font-size: 22px;
+  margin-top: 32px;
+  width: 280px;
+  height: 50px;
+  border-radius: 10px;
+  border: none;
+  background-color: #ebe6e0;
+  transition: all 0.5s;
+
+}
+#caja_recarga{
+  text-align: center;
+  display: inline-block;
+  color: white;
+  text-transform: uppercase;
+  font-size: 22px;
+  margin-top: 32px;
+  width: 280px;
+  height: 50px;
+  border-radius: 10px;
+  border: none;
+  background-color: #FC990D;
+  transition: all 0.5s;
+}
+
+#caja_recarga > p {
+  color:white;
+}
+
+
+/* contenedor3 de la seccion del juego  */
 .contenedor2{
   position: relative;
   border : solid 5px rgb(255, 255, 255);
-  width: 60%;
-  height: 80%;
+  width: 100%;
+  height: 700px;
   background-image: url("img/fondo\ duckhunt.jpg");
   background-repeat: no-repeat;
   background-size:cover;
@@ -224,30 +361,16 @@ body {
     border : solid 5px rgb(255, 0, 212);
   }
 }
-/* imagen del pato */
-#patorobot{
-  background-image: url("img/patorobot.png");
-  background-size: contain;
-  background-repeat: no-repeat;
-  width: 100px;
-  height: 100px;
-  position: absolute;
-  transition-delay: .5s;   
-}
-/* imagen del pato explotando */
-#patorobot:active{
-  background-image: url("img/explosionanimada.gif");
-  transition-delay: 50ms;/*aca retrasamos cuando aparezca la animacion de muerte*/
-}
+/* fin del contenedor 3 de la sección del juego */
 
 /*arma*/
 #arma-box{
-  position: fixed;
+  /* position: fixed; */
   left : 10;
   bottom: 0;
   width: 180px;
   height: 240px;
-  border: none;
+  /* border: 2px solid blue; */
 
   background-image: url("img/frame_1.png");
   background-size: contain;
@@ -261,35 +384,20 @@ body {
   animation-iteration-count: infinite;
 }
 @keyframes armAnim {
+  /* imagen del disparo */
   30%{
       background-image: url("img/frame_2.png");
   }
+/* imagen de apunta el arma  */
   60%{
       background-image: url("img/frame_3.png");
   }
+  /* imagen de sostiene el arma */
   100%{
       background-image: url("img/frame_1.png");
   }
 }
-/*PESTAÑA POPUP*/
-.overlay { 
-  /*position: fixed;
-  top: 0;
-  bottom: 0;
-  left: 0;
-  right: 0;*/
-  width: 100%;
-  height: 100vh;
-  background: rgba(0, 0, 0, 0.7);
-  transition: opacity 500ms;
-  visibility: hidden;
-  opacity: 0;
-  z-index: 100;
-}
-.overlay:target{
-    visibility: visible;
-    opacity: 1;
-}
+/* fin de los estilos del arma  */
 .resultados{
   width: 100%;
   height: 100vh;
