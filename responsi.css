@@ -3,7 +3,7 @@
 
 
 /* responsi */
-@media (max-width:1471px){
+@media (max-width:1475px){
 
     #left-div{
         text-align: center;
@@ -13,8 +13,133 @@
         margin-top: 40px;
         margin-bottom: 20px;
       }
+
+
+      .contenedor2-historia{
+        margin:0;
+       
+        display: flex;
+        width: 100%;
+        justify-content:space-evenly;
+      flex-wrap: wrap;
+      
+      }
 }
 
+@media (max-width:1200px) {
+
+
+
+  
+/* contenedor3 de la seccion del juego  */
+.contenedor2{
+  /* position: relative; */
+ 
+  width: 100%;
+  height: 600px;
+  background-image: url("img/fondo\ duckhunt.jpg");
+  /* background-repeat: no-repeat; */
+  background-size:cover;
+
+  animation-name: AnimacionBordeMulticolor;
+  animation-duration: 1s;
+  animation-iteration-count: infinite;
+  animation-direction: alternate;
+}
+}
+@media (max-width:1025px) {
+/*contenedor principal de la sección del juego*/
+.overlay { 
+  /*position: fixed;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;*/
+
+  margin: 100px auto 0;
+  width: 90%;
+  height: auto;
+  background: rgba(0, 0, 0, 0.7);
+  transition: opacity 500ms;
+  visibility: hidden;
+  opacity: 0;
+  z-index: 100;
+
+ 
+}
+
+
+  
+  
+  }
+  
+
+
+
+
+
+
+
+
+
+@media (max-width:711px) {
+.contenedor2{
+  height: 600px;
+
+}
+/* boton cerrar */
+
+#cerrar{
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  color: white;
+  text-transform: uppercase;
+  font-size: 22px;
+  margin-top: 20px;
+  width: 240px;
+  height: 50px;
+  border-radius: 10px;
+  border: none;
+  background-color: #FC990D;
+  transition: all 0.5s;
+}
+
+
+/* boton de tiempo */
+
+#time{
+  text-align: center;
+  display: inline-block;
+  color: rgb(14, 12, 12);
+  text-transform: uppercase;
+  font-size: 22px;
+  margin-top: 20px;
+  width: 240px;
+  height: 50px;
+  border-radius: 10px;
+  border: none;
+  background-color: #ebe6e0;
+  transition: all 0.5s;
+
+}
+#caja_recarga{
+  text-align: center;
+  display: inline-block;
+  color: white;
+  text-transform: uppercase;
+  font-size: 22px;
+  margin-top: 20px;
+  width: 240px;
+  height: 50px;
+  border-radius: 10px;
+  border: none;
+  background-color: #FC990D;
+  transition: all 0.5s;
+}
+
+
+}
 
 @media (max-width:1025px) {
     
@@ -45,6 +170,7 @@
       }
 
 
+
       /* seccion jugar */
 
       .overlay { 
@@ -61,6 +187,23 @@
       
        
       }
+
+}
+
+
+@media (max-width:846px) {
+
+
+/* .contenedor-rangos > div >img {
+
+height:100px
+} */
+
+.rango-img{
+
+  height:120px;
+}
+
 }
 
 @media (max-width:650px) {
@@ -112,10 +255,27 @@
 
       
 }
+
+
+@media (max-width:602px) {
+#right-div {
+  width: 600px;
+  height: 300px;
+  margin: 3px;
+  margin-right: 10px;
+}
+#right-div  > img {
+  
+  height: 300px;
+  margin: 3px;
+  margin-right: 10px;
+}
+
+}
 @media (max-width:550px) {
 
     #contenedor-rangos>div{
-        border: 1px solid rgb(0, 255, 179);
+        
          width: 80%;
          text-align: center;
        
@@ -132,4 +292,26 @@
        min-height: 600px;
       }
 
+
+
+
+}
+
+@media (max-width:502px) {
+
+
+.contenedor2{
+  /* position: relative; */
+  
+  width: 100%;
+  height: 500px;
+  background-image: url("img/fondo\ duckhunt.jpg");
+  /* background-repeat: no-repeat; */
+  background-size:cover;
+
+  animation-name: AnimacionBordeMulticolor;
+  animation-duration: 1s;
+  animation-iteration-count: infinite;
+  animation-direction: alternate;
+}
 }

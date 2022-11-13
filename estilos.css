@@ -124,18 +124,20 @@ body {
 .contenedor-historia{
   height: auto;
   width: 100%;
-  /* border:2px solid red; */
 
-  
+  /* si saco esta propiedad el menu me manda al contendedor hijo */
+  border:1px solid rgb(3, 1, 1);
+ 
 
 }
 .contenedor2-historia{
   margin-top: 200px;
-  
+ 
   display: flex;
   width: 100%;
   justify-content:space-evenly;
 flex-wrap: wrap;
+
 }
 
 #left-div{
@@ -189,7 +191,9 @@ flex-wrap: wrap;
 /* contenedor  principal de la seccicon como jugar */
 #como-jugar{
   height: auto;
-  margin-top: 300px;
+  margin-top: 200px;
+  /* si saco esta propiedad el menu me manda a su contendedor hijo */
+  border:1px solid black;
  
   
 }
@@ -308,7 +312,7 @@ color: white;
   visibility: hidden;
   opacity: 0;
   z-index: 100;
-  /* border: 2px solid blue; */
+ 
  
 }
 
@@ -321,12 +325,13 @@ color: white;
 
 /* contenedor 2 de la sección del juego  */
 .mega-contenedor{
-  width: 98%;
+  width: 100%;
   height: auto;
   
 margin: 0px auto 0px;
 
   border: 1px solid black;
+  
 }
 /* fin del  contenedor 2 de la sección del juego  */ 
 
@@ -339,6 +344,7 @@ margin: 0px auto 0px;
  text-align: center;
 margin:0 auto;
 margin-bottom: 18px;
+
 }
 
 
@@ -403,7 +409,7 @@ margin-bottom: 18px;
   /* position: relative; */
   border : solid 5px rgb(255, 255, 255);
   width: 100%;
-  height: 700px;
+  height: 650px;
   background-image: url("img/fondo\ duckhunt.jpg");
   /* background-repeat: no-repeat; */
   background-size:cover;

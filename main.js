@@ -19,7 +19,7 @@ function MoverPato(){
     //estas variable guardan un numero entero aleatorio
     //no fueron declarados las variables randnum , randNum2
     randNum  = Math.round(Math.random()*200); 
-    randNum2 = Math.round(Math.random()*600);
+    randNum2 = Math.round(Math.random()*500);
     // se  creado variables que no se an estan utilizando 
     //documen modifica los elementos html de archivo index
     var A = document.getElementById("patorobot").style.marginTop = randNum + "px";
