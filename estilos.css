@@ -135,7 +135,6 @@ body {
   display: flex;
   width: 100%;
   justify-content:space-evenly;
-border:2px solid white;
 flex-wrap: wrap;
 }
 
@@ -190,18 +189,18 @@ flex-wrap: wrap;
 /* contenedor  principal de la seccicon como jugar */
 #como-jugar{
   height: auto;
-  border: 1px solid rgb(217, 255, 0);
   margin-top: 300px;
  
   
 }
 
-/* seccuon de las instrucciones */
+/* seccion de las instrucciones */
 
 .pasos{
+
  width:90%;
  
-  margin: 150px auto 30px;
+  margin: 60px auto 30px;
   
 }
 
@@ -327,7 +326,7 @@ color: white;
   
 margin: 0px auto 0px;
 
-  border: 2px solid red;
+  border: 1px solid black;
 }
 /* fin del  contenedor 2 de la sección del juego  */ 
 
