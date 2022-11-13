@@ -109,10 +109,69 @@ window.addEventListener('click', MouseSound , false);
 
 //Movimiento del Arma por Juan Villegas
 var miArma = document.getElementById("arma-box");
+
+
+function ver(){
+    clientWidth = document.getElementById('tamaño').clientWidth;
+     clientHeight = document.getElementById('tamaño').clientHeight;
+     
+    };
+setInterval(ver,1000)
+
 function mousemove(event){
+    console.log(clientWidth)
 // esta propiedad hace que mi arma se salga de su contenedor 
-    miArma.style.position = 'fixed';
-    miArma.style.left = (event.clientX / 22) + "%";
+    miArma.style.position = 'sticky';
+    //con esto estoy moviendo la imagen de la pistola 
+   
+    if(clientWidth>1500){
+    miArma.style.left = (event.clientX /22 ) + "%";
+    }
+    if(clientWidth>1250 && clientWidth <1500){
+        miArma.style.left = (event.clientX /19 ) + "%";
+        }
+     if(clientWidth>1200 && clientWidth <1250){
+        miArma.style.left = (event.clientX /17 ) + "%";
+
+     }
+     if(clientWidth>1100 && clientWidth <1200){
+        miArma.style.left = (event.clientX /16 ) + "%";
+
+     }
+     if(clientWidth>1000 && clientWidth <1100){
+        miArma.style.left = (event.clientX /15 ) + "%";
+
+     }
+     if(clientWidth>900 && clientWidth <1000){
+        miArma.style.left = (event.clientX /14 ) + "%";
+
+     }
+
+     if(clientWidth>800 && clientWidth <900){
+        miArma.style.left = (event.clientX /13 ) + "%";
+
+     }
+     if(clientWidth>700 && clientWidth <800){
+        miArma.style.left = (event.clientX /12 ) + "%";
+
+     }
+     if(clientWidth>600 && clientWidth <700){
+        miArma.style.left = (event.clientX /11 ) + "%";
+
+     }
+     if(clientWidth>500 && clientWidth <600){
+        miArma.style.left = (event.clientX /10 ) + "%";
+
+     }
+     if(clientWidth>400 && clientWidth <500){
+        miArma.style.left = (event.clientX /9 ) + "%";
+
+     }
+
+
+   
+
+   
 }
 //Animacion de Disparo por Juan Villegas
 function Shoot(){

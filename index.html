@@ -8,6 +8,8 @@
     <title>Duck Game</title>
     <!--Importacion de fuente y libreria por Juan Villegas-->
     <link rel="stylesheet" href="estilos.css">
+    <link rel="stylesheet" href="responsi.css">
+    <link rel="stylesheet" href="/sidr.dark.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Kdam+Thmor+Pro&display=swap" rel="stylesheet">
@@ -19,14 +21,19 @@
     <!--HTML(Menu) hecho por Gianluka Vazques-->
     
 
-    <div class="contenedor_global">
+    <div class="contenedor_global" id="tamaño">
     <!-- botones de menu -->
-    <ul class="nav">
+    <div id="sidr">
+    <ul class="nav" >
         <li><a href="#historia">HISTORIA</a></li>
         <li><a href="#como-jugar">COMO JUGAR</a></li>
-        <li><a href="#PROBANDO">JUGAR</a></li>
+        <li><a href="#nuevo">JUGAR</a></li>
         <li><a href="indexcreditos.html">CREDITOS</a></li>
     </ul>
+</div>
+<div id="overlay"> </div>
+
+<a id="simple-menu" class="menu-button" href="#sidr">Toggle menu</a>
     <!-- fin de botones del menu -->
 
   <!-- seccion de la imagen principal del juego  -->
@@ -39,6 +46,7 @@
 
       <!-- sección del la historia del juego -->
     <div class="contenedor-historia" id="historia">
+        <div class="contenedor2-historia">
         <div id="left-div" data-aos="fade-right" data-aos-duration="1000">
             <h1>HISTORIA</h1>
             <p>
@@ -52,18 +60,29 @@
                 el destino de la humanidad esta en tus manos soldado.
 
             </p>
-            <div class="centrar"><a href="#como-jugar"><button id="como-jugar-button">SIGUIENTE</button></a></div>
+            
         </div>
         <div id="right-div" data-aos="flip-right" data-aos-duration="1000">
         <!-- se encontro atributos en el html que no se estan usando --> 
             <img src="img/virus_gif.gif" alt="">
         </div>
     </div>
+    <div class="centrar"><a href="#como-jugar"><button id="como-jugar-button">SIGUIENTE</button></a></div>
+    </div>
     <!-- final de la historia del juego -->
 
 
     <!--Sección de como jugar del juego-->
     <div id="como-jugar">
+        <section class="pasos">
+               <H2>INSTRUCCIONES DEL JUEGO </H2>
+                <ol>
+                    <li>Primeramente apunta a los patos con el arma. </li>
+                    <li> Luego dispara lo más rápido posible.</li>
+                    <li>Mientras más patos mates en menos tiempo  obtendras un mejor rango . </li>
+                </ol>
+
+        </section>
         <div id="contenedor-rangos">
             <div class="low" data-aos="fade-up" data-aos-duration="500">
                 <img src="img/low-range.webp" alt="low">
@@ -81,12 +100,14 @@
                 <p>Consigue 1000 puntos para obtener este rango</p>
             </div>
         </div>
-        <div class="centrar" data-aos="zoom-in-up" id="musica"><a id="jugar-button" href="#PROBANDO">JUGAR</a></div>
+        <div class="centrar" data-aos="zoom-in-up" id="musica"><a id="jugar-button" href="#nuevo">JUGAR</a></div>
     </div>
+   
   <!-- fin de la sección como juegar del juego -->
     
     <!-- inicio del contenedor princinciapl de la sección del juego -->
-    <div id="PROBANDO" class="overlay" data-aos="flip-down" data-aos-duration="1500">
+    <!-- la propiedad dta-aos afecta la posición de la imagen de la pistola  -->
+    <div id="nuevo" class="overlay" >
         <div id="popupbody">
             
             <!-- contenedor 2 del juego -->
@@ -98,7 +119,7 @@
                 <div id="caja_recarga">
                     <p>Reiniciar</p>
                 </div>
-            </div>
+              </div>
                 <!-- contenedor 3 -->
                 <div class="contenedor2">
                     <div id="final"></div>
@@ -109,8 +130,9 @@
                 </div>
 
                 <!-- arma del soldado -->
+            <div class="contenedor-arma">
                 <div class="arma-box" id ="arma-box"></div>
-
+            </div>
             </div>
         </div>
     </div>
@@ -130,8 +152,30 @@
 </body>
 <!--Activacion de libreria por Juan Villegas-->
 <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+<script src="/sidr.js"></script>
 <script>
     AOS.init();
 </script>
+
+
+
+<script>
+    (function(sidr) {
+      "use strict"
+
+      sidr.new('#simple-menu', {
+        displace: false
+      });
+
+      document.getElementById('overlay').addEventListener('click', function () {
+        sidr.close('sidr');
+      }, false);
+
+      document.getElementById('close-menu-button').addEventListener('click', function () {
+        sidr.close('sidr');
+      }, false);
+
+    })(window.sidr);
+  </script>
 
 </html>

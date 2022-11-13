@@ -25,9 +25,10 @@ body {
  min-height: 600px;
 }
 .nav {
+  margin-top: 20px;
   text-transform: uppercase;
   text-align: center;
-  font-weight: 600;
+  font-weight: 700;
 }
 
 .nav * {
@@ -89,19 +90,25 @@ body {
   align-items: center;
 
 }
+
+/* menu desplegable  */
+
+.menu-button{
+  visibility: hidden;
+}
 #title{
   color: white;
   font-size: 45px;
 }
 #imagen-menu{
-  width: 500px;
+  width: 50%;
 }
 #play-button{
   color: white;
   text-transform: uppercase;
   font-size: 32px;
   margin-top: 32px;
-  width: 170px;
+  width: 179px;
   height: 50px;
   border-radius: 10px;
   border: none;
@@ -113,16 +120,37 @@ body {
   color: white;
   background-color: red;
 }
+/* contenedor principal de la  sección  historia  */
 .contenedor-historia{
-  height: 100vh;
+  height: auto;
   width: 100%;
+  /* border:2px solid red; */
 
-  display: flex;
-  align-items: center;
+  
 
 }
+.contenedor2-historia{
+  margin-top: 200px;
+  
+  display: flex;
+  width: 100%;
+  justify-content:space-evenly;
+border:2px solid white;
+flex-wrap: wrap;
+}
+
 #left-div{
-  margin-left: 10px;margin-right: 10px;
+  width: 700px;
+  margin-left: 10px;
+  margin-right: 10px;
+  margin-top: 40px;
+
+}
+#right-div {
+  width: 600px;
+  height: 400px;
+  margin: 3px;
+  margin-right: 10px;
 }
 #left-div h1{
   color: rgb(204, 0, 0);
@@ -157,21 +185,62 @@ body {
   margin: 3px;
   margin-right: 10px;
 }
+
+
+/* contenedor  principal de la seccicon como jugar */
 #como-jugar{
-  height: 100vh;
+  height: auto;
+  border: 1px solid rgb(217, 255, 0);
+  margin-top: 300px;
+ 
+  
 }
+
+/* seccuon de las instrucciones */
+
+.pasos{
+ width:90%;
+ 
+  margin: 150px auto 30px;
+  
+}
+
+.pasos > h2{
+  color:red;
+text-align: center;
+ margin-bottom: 20px;
+  /* border:2px solid red; */
+}
+.pasos >ol >li {
+  color:white;
+
+ margin-bottom: 20px;
+  /* border:2px solid red; */
+}
+
 #contenedor-rangos{
+  
   width: 100%;
   display: flex;
-  flex-flow: row nowrap;
-  justify-content: center;
+ justify-content: space-evenly;
+   flex-wrap: wrap;
+   margin-top: 100px;
 }
+
+
 #contenedor-rangos>div{
-  width: 30%;
-  display: flex;
-  flex-flow: column nowrap;
-  align-items: center;
+  /* border: 1px solid rgb(0, 255, 179); */
+   width: 250px;
+   text-align: center;
+ 
 }
+#contenedor-rangos>div >p{
+  /* border: 1px solid rgb(0, 255, 179); */
+color: white;
+ 
+}
+
+
 #jugar-button{
   padding-top: 10px;
   text-align: center;
@@ -232,15 +301,16 @@ body {
   left: 0;
   right: 0;*/
 
-  margin: 0 auto;
+  margin: 100px auto 0;
   width: 80%;
-  height: 100vh;
+  height: auto;
   background: rgba(0, 0, 0, 0.7);
   transition: opacity 500ms;
   visibility: hidden;
   opacity: 0;
   z-index: 100;
-  border: 2px solid blue;
+  /* border: 2px solid blue; */
+ 
 }
 
 /* cuando una etiqueta <a> llame o apunte al #PROVANDO del <div>  le daremos los siguientes estilos */ 
@@ -253,11 +323,10 @@ body {
 /* contenedor 2 de la sección del juego  */
 .mega-contenedor{
   width: 98%;
-  height: 700px;
-margin: 0 auto;
-  /* display: flex;
-  justify-content: center;
-  align-items: center; */
+  height: auto;
+  
+margin: 0px auto 0px;
+
   border: 2px solid red;
 }
 /* fin del  contenedor 2 de la sección del juego  */ 
@@ -265,12 +334,12 @@ margin: 0 auto;
 
 .contenedor-botones{
 
-  
-  border:2px solid green;
-  display: inline-block;
- 
-margin-left: 230px;
-margin-bottom: 10px;
+/*   
+  border:2px solid green; */
+  display: block;
+ text-align: center;
+margin:0 auto;
+margin-bottom: 18px;
 }
 
 
@@ -283,7 +352,7 @@ margin-bottom: 10px;
   color: white;
   text-transform: uppercase;
   font-size: 22px;
-  margin-top: 32px;
+  margin-top: 20px;
   width: 280px;
   height: 50px;
   border-radius: 10px;
@@ -291,6 +360,7 @@ margin-bottom: 10px;
   background-color: #FC990D;
   transition: all 0.5s;
 }
+
 
 /* boton de tiempo */
 
@@ -300,7 +370,7 @@ margin-bottom: 10px;
   color: rgb(14, 12, 12);
   text-transform: uppercase;
   font-size: 22px;
-  margin-top: 32px;
+  margin-top: 20px;
   width: 280px;
   height: 50px;
   border-radius: 10px;
@@ -315,7 +385,7 @@ margin-bottom: 10px;
   color: white;
   text-transform: uppercase;
   font-size: 22px;
-  margin-top: 32px;
+  margin-top: 20px;
   width: 280px;
   height: 50px;
   border-radius: 10px;
@@ -331,12 +401,12 @@ margin-bottom: 10px;
 
 /* contenedor3 de la seccion del juego  */
 .contenedor2{
-  position: relative;
+  /* position: relative; */
   border : solid 5px rgb(255, 255, 255);
   width: 100%;
   height: 700px;
   background-image: url("img/fondo\ duckhunt.jpg");
-  background-repeat: no-repeat;
+  /* background-repeat: no-repeat; */
   background-size:cover;
 
   animation-name: AnimacionBordeMulticolor;
@@ -363,17 +433,28 @@ margin-bottom: 10px;
 }
 /* fin del contenedor 3 de la sección del juego */
 
+
+
+
+
+
+/* contenedor arma */
+
+/* .contenedor-arma{
+
+  border : solid 5px rgb(255, 0, 212);
+} */
 /*arma*/
 #arma-box{
-  /* position: fixed; */
-  left : 10;
+   /* position: absolute; */
+  line-height: 2;
   bottom: 0;
   width: 180px;
-  height: 240px;
-  /* border: 2px solid blue; */
+  height: 180px;
+
 
   background-image: url("img/frame_1.png");
-  background-size: contain;
+  background-size:cover;
   background-position-y: 100%;
   background-repeat: no-repeat;
 
