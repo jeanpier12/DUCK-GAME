@@ -288,7 +288,7 @@ color: white;
   width: 100px;
   height: 100px;
   position: absolute;
-  transition-delay: .5s;   
+  transition-delay: .01s; /*velocidad de animación del pato cuando es disparado*/ 
 }
 /* imagen del pato explotando */
 #patorobot:active{
