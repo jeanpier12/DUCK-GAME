@@ -78,8 +78,10 @@ body {
   transform: translate(0,0);
   opacity: 1;
 }
+
+/* menu desplegable  de la selección del juego */
 .nav a:hover {
-  color: #c51567;
+  color: red; 
 }
 .contenedor{
   width: 100%;
@@ -118,7 +120,7 @@ body {
 #play-button:hover{
   width: 225px;
   color: white;
-  background-color: red;
+  background-color: #44da17;
 }
 /* contenedor principal de la  sección  historia  */
 .contenedor-historia{
@@ -132,7 +134,7 @@ body {
 }
 .contenedor2-historia{
   margin-top: 200px;
- text-align: justify;
+ text-align:justify;
   display: flex;
   width: 100%;
   justify-content:space-evenly;
@@ -182,7 +184,7 @@ flex-wrap: wrap;
   transition: all 0.5s;
 }
 #como-jugar-button:hover{
-  background-color: #a81995;
+  background-color: #44da17;
   width: 225px;
 }
 #right-div img{
