@@ -132,7 +132,7 @@ body {
 }
 .contenedor2-historia{
   margin-top: 200px;
- 
+ text-align: justify;
   display: flex;
   width: 100%;
   justify-content:space-evenly;
