@@ -16,6 +16,7 @@
 
 <body>
     <!--HTML(Menu) hecho por Gianluka Vazques-->
+    <div class="contenedor_global">
     <script src="main.js"></script>
     <ul class="nav">
         <li><a href="#historia">HISTORIA</a></li>
@@ -25,7 +26,8 @@
     </ul>
     <div class="contenedor">
         <h1 id="title">DUCK GAME</h1>
-        <img id="imagen-menu" src="img/cazador.jpg" alt="cazador">
+        <div class="contenedor-img2">
+        <img id="imagen-menu" src="img/cazador.jpg" alt="cazador"></div>
         <a href="#historia"><button id="play-button">SIGUIENTE</button></a>
     </div>
     <div class="contenedor-historia" id="historia">
@@ -42,20 +44,21 @@
                 el destino de la humanidad esta en tus manos soldado.
 
             </p>
-            <div class="centrar"><a href="#como-jugar"><button id="como-jugar-button">SIGUIENTE</button></a></div>
+            
         </div>
         <div id="right-div" data-aos="flip-right" data-aos-duration="1000">
         <!-- se encontro atributos en el html que no se estan usando --> 
             <img src="img/virus_gif.gif" alt="">
         </div>
     </div>
+    <div class="centrar"><a href="#como-jugar"><button id="como-jugar-button">SIGUIENTE</button></a></div>
     <!--HTML(Menu) hecho por Juan Villegas-->
     <div id="como-jugar">
         <div id="contenedor-rangos">
             <div class="low" data-aos="fade-up" data-aos-duration="500">
                 <img src="img/low-range.webp" alt="low">
                 <h1>Cadete</h1>
-                <p>Consigue 100 puntos para obtener este rango</p>
+                <p style="text-align:center ;">Consigue 100 puntos para obtener este rango</p>
             </div>
             <div class="mid" data-aos="fade-up" data-aos-duration="1000">
                 <img src="img/mid-range.webp" alt="mid">
@@ -83,7 +86,14 @@
                 <div class="arma-box" id ="arma-box"></div>
             </div>
         </div>
+        
     </div>
+    <!-- Controles del volumen -->
+    <div class="centrar"><a><button id="como-jugar-button" onclick="restoreAudio()">PLAY MÚSICA</button><button
+                id="como-jugar-button" onclick="pauseInicio()">PAUSAR MÚSICA</button> <button id="como-jugar-button"
+                onclick="subirVol()">SUBIR MÚSICA</button><button id="como-jugar-button" onclick="bajarVol()">BAJAR
+                MÚSICA</button></a></div>
+    <!-- Cierre de controles de volumen  -->
     <div class="resultados">
         <div class="centrado" id = "centrado">
             <img src="img/winner.png" alt="" data-aos="zoom-in-up" data-aos-duration="800">
@@ -91,6 +101,7 @@
             <div id="rango" data-aos="zoom-in-up" data-aos-duration="1500"></div>
         </div>
     </div>
+</div>
     <script  src="main.js"></script>
 </body>
 <!--Activacion de libreria por Juan Villegas-->

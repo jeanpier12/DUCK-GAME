@@ -68,14 +68,32 @@ function MusicaInicio() {
     audio.volume = 0.5;
     audio.play()
 }
+
+// Botones para control de volumen
+function restoreAudio(){
+    audio.play();
+    
+}
+
 function pauseInicio(){
     audio.pause();
+    
 }
+function subirVol(){
+    audio.volume = 0.8;
+    
+}
+function bajarVol(){
+    audio.volume = 0.2;
+    
+}
+//botones de control de volumen
 function MusicaVictoria(){
     var fileUrl = "Sounds/win.mp3";
     audio2 = new Audio(fileUrl);
     audio2.volume = 0.5;
     audio2.play();
+    
 }
 //Eventos por Jhonny Castillo
 document.getElementById('musica').addEventListener("click",MusicaInicio);
